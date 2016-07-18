@@ -4,6 +4,6 @@ FROM java:7
 RUN mkdir /setup
 ADD install.sh /setup/install.sh
 RUN /setup/install.sh
-ENTRYPOINT java -jar /srv/tika-server-1.*-SNAPSHOT.jar --host=0.0.0.0 --port=$PORT
+CMD java -jar /srv/tika-server-1.*-SNAPSHOT.jar --host=0.0.0.0 --port=$PORT
 
 #EXPOSE 9998
